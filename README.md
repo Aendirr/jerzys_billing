@@ -1,6 +1,8 @@
 ![JERZYS HEADER](https://user-images.githubusercontent.com/98268955/157347441-b1834f58-e963-4858-ae1f-491deadd5dc2.png)
 Jerzy's Billing is an advanced billing system for QB-Core. You can see more in the list of features what is actually implented
 
+TÜRKÇELEŞTİRİLMİŞTİR.
+
 ## Dependency
 
 * [QBCore](https://github.com/qbcore-framework/qb-core)
