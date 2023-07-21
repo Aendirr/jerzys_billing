@@ -51,11 +51,11 @@ RegisterNetEvent('jerzys_billing:server:doneBilling',function(data)
                 currentPlayer.Functions.RemoveMoney("cash", ammount, "jerzys_billing-paid")
                 if paidPlayer ~= nil then
                     paidPlayer.Functions.AddMoney("cash", ammount, "jerzys_billing-paid");
-                    TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "You have recived $"..ammount.."$ from: "..currentPlayerFirstName.." cash!", "success")
+                    TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "You have recived $"..ammount.."$ Şu Kişiden: "..currentPlayerFirstName.." Nakit!", "success")
                 end
             else
-                TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "Player doesnt have money to pay the bill!", "success")
-                TriggerClientEvent("QBCore:Notify", currentPlayer.PlayerData.source, "You don't have enough Cash!", "error")
+                TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "Oyuncunun faturayı ödeyecek parası yok!", "success")
+                TriggerClientEvent("QBCore:Notify", currentPlayer.PlayerData.source, "Yeterli Nakitiniz yok!", "error")
             end
         end
     else
@@ -67,8 +67,8 @@ RegisterNetEvent('jerzys_billing:server:doneBilling',function(data)
                     TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "You have recived $"..ammount.."$ from: "..currentPlayerFirstName.." bank!", "success")
                 end
             else
-                TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "Player doesnt have money to pay the bill!", "success")
-                TriggerClientEvent("QBCore:Notify", currentPlayer.PlayerData.source, "You don't have enough Bank!", "error")
+                TriggerClientEvent("QBCore:Notify", paidPlayer.PlayerData.source, "Oyuncunun faturayı ödeyecek parası yok!", "success")
+                TriggerClientEvent("QBCore:Notify", currentPlayer.PlayerData.source, "Bankanızda Yeterli Paranız Yok!", "error")
             end
         end
     end
